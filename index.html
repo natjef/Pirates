@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pirates!</title>
+    <script type="text/javascript" src="js/phaser.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+    var platforms;
+    var player;
+    var score = 0;
+    var scoreText;
+    var winText;
+    var timeText;
+    var newGameText;
+    var frozen;
+    var gameTime;
+    var newGameTimer;
+
+    function preload() {
+        game.load.image('water', 'resources/images/PNG/Tiles/tile_73.png');   //Loads assets and assigns their identifiers
+        game.load.spritesheet('player', 'resources/images/PNG/Ships/ship (2).png', 32, 38);
+    }
+
+    function create() {  //init
+
+    }
+
+
+    function update() { //logic, called every frame
+
+    }
+
+    function endGame() {
+
+    }
+
+    function freeze(){ //freeze all entities in the game
+
+    }
+
+    function unFreeze(){ //unfreeze all entities
+
+    }
+
+</script>
+</body>
+</html>
