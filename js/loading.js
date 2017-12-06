@@ -13,6 +13,7 @@ var loadingState = {
         game.load.image('playerShip1', 'resources/images/PNG/Ships/ship_2.png');
         game.load.image('water', 'resources/images/PNG/Tiles/tile_73.png');
         game.load.image('menuImage', 'resources/images/PNG/statics/menuImage.png');
+        game.load.image('button1', 'resources/images/ui/PNG/red_button02.png');
 
         //load sounds
         game.load.audio('theme', 'resources/sounds/theme.wav');
