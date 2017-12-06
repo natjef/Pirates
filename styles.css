@@ -1,12 +1,9 @@
-@font-face { font-family: Deadhand; src: url('/resources/fonts/treamd.ttf'); }
-
 h1 {
     color: maroon;
     text-align: center;
     padding: 0px;
 }
 
-.text {
-    color: maroon;
-    font-family: Deadhand, "Comic Sans MS", serif;
+.text{
+    font-family: 'Della Respira', "Comic Sans MS", sans-serif;
 }
