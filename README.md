@@ -11,3 +11,6 @@ Mr. Webdesign and Mr. QA:
   
 Mr. Code:
   Brendan Sherman
+
+NOTES: 
+* https://dribbble.com/trzown
