@@ -1,6 +1,8 @@
 var theme;
-var newGameText;
+var welcome;
 var background;
+var playButton;
+var configureButton;
 
 var menuState = {
     create:function(){
@@ -11,7 +13,9 @@ var menuState = {
         background = game.add.sprite(0, 0, 'menuImage');
         background.scale.setTo(.8, .8);
 
-        newGameText = game.add.text(game.world.width/14, game.world.height/69, 'Welcome to the high seas!',
+        playButton = game.add.button(10, game.world.height/5, 'button1', startMenu, this);
+
+        welcome = game.add.text(game.world.width/14, game.world.height/69, 'Welcome to the high seas!',
             { font: 'Della Respira', fontSize: '48px', fill: '#800000' });
     },
 
@@ -19,3 +23,7 @@ var menuState = {
 
     }
 };
+
+function startMenu(){
+    game.state.start('sail');
+}
