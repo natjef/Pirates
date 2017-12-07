@@ -24,7 +24,7 @@ var loadingState = {
             { font: 'Della Respira', fontSize: '64px', fill: '#800000' });
 
         loadingTimer = game.time.create(false);
-        loadingTimer.add(5000, function(){game.state.start('menu');}, this);
+        loadingTimer.add(1500, function(){game.state.start('menu');}, this);
         loadingTimer.start();
 
         game.time.events.loop(350, stateChange, this); //loading screen loop, calls statechange

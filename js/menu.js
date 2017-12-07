@@ -9,8 +9,10 @@ var fontSmall = { font: 'Della Respira', fontSize: '32px', fill: '#800000' };
 var menuState = {
     create:function(){
         theme = game.add.audio('theme'); //adds theme
-        theme.addMarker('chorus', 36, 243, 1, true); //adds the chorus of the theme as a marker
-        theme.play('chorus'); //plays the marker
+        theme.addMarker('chorus', 36.5, 243, 1, true); //adds the chorus of the theme as a marker
+         //plays the marker
+
+        game.sound.setDecodedCallback(theme, startMusic, this); //Event for audio decoding
 
         background = game.add.sprite(0, 0, 'menuImage'); //scales and draws bg
         background.scale.setTo(.8, .8);
@@ -26,7 +28,11 @@ var menuState = {
     }
 };
 
-function startGame(){ //
-    game.state.start('sail');
+function startGame(){ //On PLAY clicked
+    game.state.start('tutorial');
     theme.destroy();
+}
+
+function startMusic(){ //plays menu theme
+    theme.fadeIn(3000, true, 'chorus');
 }
