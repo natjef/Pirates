@@ -27,6 +27,9 @@ var tutState = {
         continueButton = game.add.button(10, 5*(game.world.height/6), 'button1', continueTutorial, this); //play button
         game.add.text(35, 5*(game.world.height/6), 'Continue.', fontMed); // button text
 
+        skipButton = game.add.button(10, 4 * (game.world.height/6), 'button1', skipTutorial, this);
+        game.add.text(35, 4 * (game.world.height / 6), 'Skip.', fontMed);
+
     },
 
         update: function () {
@@ -43,3 +46,6 @@ function continueTutorial() { // on "OK" button clicked
     }
 }
 
+function skipTutorial() {
+    tutorialProgress = tutorialText.length - 1;
+}
