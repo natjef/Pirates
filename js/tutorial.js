@@ -20,20 +20,26 @@ var tutState = {
         playerBoat.scale.y *= -1; // not sure what this does.
 
         // add text to the game
-        tutorialMessage = game.add.text(game.world.width/4, game.world.height/2, states[state],
-            { font: 'Della Respira', fontSize: '32px', fill: '#800000' });
+        tutorialMessage = game.add.text(game.world.width/2, game.world.height/4, "error.", // draw the tutorial text
+            { font: 'Della Respira', fontSize: '32px', fill: '#800000'});
+        tutorialMessage.anchor.setTo(.5, .5); // origin point
+
+        continueButton = game.add.button(10, 5*(game.world.height/6), 'button1', continueTutorial, this); //play button
+        game.add.text(35, 5*(game.world.height/6), 'Continue.', fontSmall); // button text
 
     },
 
         update: function () {
-            switch (tutorialProgress) {
-                case 0:
-                    tutorialMessage.text = tutorialText[0]
-            }
-        },
-
-        continueTutorial: function () {
-
+            tutorialMessage.text = tutorialText[tutorialProgress];
         }
 };
+
+function continueTutorial() { // on "OK" button clicked
+    switch (tutorialProgress) {
+        default: // if the tutorial message is just text with no control explanations, just continue to the next step when user clicks the button.
+            tutorialProgress++;
+            break;
+        case 2: // if the tutorial message wants the user to hit a specific button or key, wait until they press it before continuting.
+    }
+}
 
