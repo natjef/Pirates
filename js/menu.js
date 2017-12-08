@@ -17,7 +17,7 @@ var menuState = {
         background.scale.setTo(.8, .8);
 
         playButton = game.add.button(10, 5*(game.world.height/6), 'button1', startGame, this); //play button
-        game.add.text(75, 5*(game.world.height/6), 'Play!', fontSmall);
+        game.add.text(75, 5*(game.world.height/6), 'Play!', fontMed);
 
         welcome = game.add.text(game.world.width/14, game.world.height/69, 'Welcome to the high seas!', fontLarge);
     },

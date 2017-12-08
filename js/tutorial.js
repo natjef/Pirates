@@ -21,11 +21,11 @@ var tutState = {
 
         // add text to the game
         tutorialMessage = game.add.text(game.world.width/2, game.world.height/4, "error.", // draw the tutorial text
-            { font: 'Della Respira', fontSize: '16px', fill: '#800000'});
+            fontSmall);
         tutorialMessage.anchor.setTo(.5, .5); // origin point
 
         continueButton = game.add.button(10, 5*(game.world.height/6), 'button1', continueTutorial, this); //play button
-        game.add.text(35, 5*(game.world.height/6), 'Continue.', fontSmall); // button text
+        game.add.text(35, 5*(game.world.height/6), 'Continue.', fontMed); // button text
 
     },
 
