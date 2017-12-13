@@ -43,20 +43,6 @@ var tutState = {
 
         update: function () {
             tutorialMessage.text = tutorialText[tutorialProgress];
-
-            /*
-            TAKE INPUT
-
-            ALL OF THE MOVEMENT MECHANICS AND LOGIC ARE ***PLACEHOLDERS***.
-
-            TODO: REDO ALL OF THIS STUFF!
-             */
-            
-            cursors = game.input.keyboard.createCursorKeys(); //define up left right down
-
-            if (cursors.W.isDown) {
-                wpressed = true;
-            }
         }
 };
 
